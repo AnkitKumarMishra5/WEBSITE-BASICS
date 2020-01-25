@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+<title> LMS </title>
+<link rel="shortcut icon" href ="Library3.ico">
+<style>
+.item1{grid-area:div1;padding:125px;}
+.item2{grid-area:div2;}
+.item3{grid-area:div3;}
+.item4{grid-area:div4;}
+.item5{grid-area:div5;}
+.grid-container
+{
+display:grid;
+grid-gap:5px;
+grid-template-areas:
+      'div1 div1 div1 div1 div1 div1'
+      'div2 div2 div3 div3 div4 div4'
+      'div5 div5 div5 div5 div5 div5'
+}
+.grid-container>div
+{
+color:black;
+font-family:cursive;
+font-size:150%;
+text-align:center;
+}
+table,th
+{
+border:5px solid black;
+border-collapse:collapse;
+}
+select
+{
+cursor:pointer;
+font-family:cursive;
+border-radius:10%;
+}
+input[type=submit],[type=text],input[type=password]
+{
+cursor:pointer;
+font-family:cursive;
+border-radius:10%;
+}
+</style>
+<script>
+function abc()
+{
+if(document.getElementById("a").value=="admin"&&document.getElementById("b").value=="123"&&document.getElementById("c").value=="1"&&document.getElementById("d").value=="3")
+{
+window.open("PROJECT(LandingPage2).html",'_self')
+}
+else if(document.getElementById("a").value=="admin"&&document.getElementById("b").value=="123"&&document.getElementById("c").value=="1"&&document.getElementById("d").value=="4")
+{
+window.open("PROJECT(SearchBooks).html",'_self')
+}
+else if(document.getElementById("a").value=="admin"&&document.getElementById("b").value=="123"&&document.getElementById("c").value=="1"&&document.getElementById("d").value=="5")
+{
+window.open("PROJECT(AddNewMember).html",'_self')
+}
+else if(document.getElementById("a").value=="admin"&&document.getElementById("b").value=="123"&&document.getElementById("c").value=="1"&&document.getElementById("d").value=="6")
+{
+window.open("PROJECT(Issue Books).html",'_self')
+}
+else if(document.getElementById("a").value=="admin"&&document.getElementById("b").value=="123"&&document.getElementById("c").value=="1"&&document.getElementById("d").value=="7")
+{
+window.open("PROJECT(ReturnBooks).html",'_self')
+}
+else
+{
+alert("Invalid Username/Password")
+}
+}
+</script>
+</head>
+<body style="background-image:url(Library.jpeg);background-repeat:no-repeat;background-size:130%;background-blend-mode:lighten;">
+<div class="grid-container">
+<div class="item1">
+<div style="background-color:rgba(0,0,0,0.5);margin-top:5px;padding-bottom:15px;font-family:ALGERIAN;font-size:300%;color:#FFFFFF;">
+LIBRARY MANAGEMENT SYSTEM
+</div>
+<div class ="item2"></div>
+<p>
+<center>
+<div class="item3">
+<table style="background-color:rgba(0,0,0,0.4);margin-top:30px;padding-bottom:15px;height=300%;width=300%;color:#FFFFFF;">
+<th> LOGIN PAGE <br>
+USERNAME: <input type="text" id="a" placeholder="NAME">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+PASSWORD: <input type="password" id="b" placeholder="PASSWORD"><br>
+USER:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<select id="c">
+<option value="1">LIBRARIAN</option>
+<option value="2">STUDENT</option>
+</select>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+LANDING PAGE:
+<select id="d">
+<option value="3">HOME PAGE</option>
+<option value="4">SEARCH BOOK</option>
+<option value="5">ADD MEMBER</option>
+<option value="6">ISSUE BOOK</option>
+<option value="7">RETURN BOOK</option>
+</select><br>
+<input type="submit" value="LOGIN" onclick="abc()">
+</p>
+</center>
+<div class ="item4"></div>
+<div class="item5"></div>
+</div>
+</body>
+</html>
